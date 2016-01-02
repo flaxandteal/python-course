@@ -1,0 +1,50 @@
+HFDY1 : 2016/01/16, Tue
+-----
+
+PREREQUISITES: basic use of MATLAB .or. (intermediate knowledge of a programming language)
+
+Paper survey to be taken on areas of interest and potential uses of Python.
+
+Session 1 (8:50 - 11:00)
+ - 9.00 - 9.20 : What is Python, why use it, who uses it and what are the benefits?
+ - 9.20 - 10.50 (i) : Basic control structures and variables
+ - 12.00 - 12:10 : Applications of Python - Scripting tasks
+
+Break (11.00 - 11:15)
+
+Session 2 (11:15 - 13:45)
+ - 11.15 - 12.15 (i) : Modules - General usage / core modules / virtualenv
+ - 12:15 - 12:25 : Applications of Python - Statistics / Data Analysis / Logging
+ - 12:25 - 13:25 (i) : File operations / Matplotlib / Basic Numpy
+ - 13.25 - 13:30 : Applications of Python - Engineering
+ - 13.30 - 13:35 : Closing comments
+ - 13:35 - 13:45 : Installing on your own device
+
+Approx. 3.5h of interactive sessions, marked (i)
+Afterwards: assistance available with installs
+
+HFDY2 : 2016/02/01, Tue
+-----
+
+PREREQUISITES: HFDY1 .or. (familiarity with OOP .and. intermediate knowledge of MATLAB/C++/any scripting language)
+
+Session 1 (8:50 - 11:10)
+ - 9.00 - 9.20 : Recap of HFDY1
+ - 9.20 - 10.10 (i) : Further Numpy / matplotlib (+ refreshing)
+ - 10.10 - 10.20 : Pythonic - how Python differs
+ - 10.20 - 11.10 (i) : Further control structures (lambdas / basic classes)
+
+Break (11.10 - 11.25)
+
+Session 2 (11.25 - 13:30)
+ - 11.25 - 11.35 : Applications of Python - Embedded / Control / Network
+ - 11.35 - 12.35 (i) : Threading and basic sockets / network usage [1]
+ - 12.35 - 12.45 : Github and PyPI - "How many goodly creatures..."
+ - 12.45 - 13.35 (i) : Error handling and brief introduction to unit testing
+ - 13.35 - 13.45 : Closing presentation
+
+Approx. 3.5h of interactive sessions, marked (i)
+Afterwards: individual questions; PhD project-related pointers (at least for survey respondents in HSDY1 and any topics I happen to know off-hand for others)
+
+NOTES:
+ 1 - at this point, if there are a mixture of networking compscis and physical scientists, this would be split into two separate simultaneous tasks: Threading+Networking and Threading+Calculation
