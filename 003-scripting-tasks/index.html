@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">  
+  <head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/sky.css" id="theme"> 
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <style>
+      .attribution {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        font-size: 0.5em;
+      }
+      html.img-left div.slide-background.present {
+        background-position: left;
+        background-size: contain;
+      }
+      html.img-right div.slide-background.present {
+        background-position: right;
+        background-size: contain;
+      }
+      html.img-right .slides {
+        text-align: left
+      }
+      .reveal .example {
+        color: #400;
+        padding-top: 0.5em;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="reveal">
+        <div class="slides">
+          <section>
+            <h1>Applications of Python</h1>
+            <h2>Scripting tasks</h2>
+          </section>
+          <section>
+            <aside class="notes">This is a brief motivational talk -
+              the first of a few - to give you an idea of what you can
+              do with python. Obviously, we won't have time to go through
+              lots of examples, especially more advanced topics, but this
+              provides an opportunity to show how much you can get out
+              of your investment in getting to grips with the language
+            </aside>
+            <h2>What is scripting?</h2>
+            <ul>
+              <li class="fragment">Automating a task by writing a list of commands</li>
+              <li class="fragment example">Grabbing sentences containing a word from lots of files</li><aside class="notes">This is something you might do infrequently</aside>
+              <li class="fragment example">Every five minutes, automatically downloading Bitcoin exchange stats and executing sensible trades</li>
+                <aside class="notes">This is something you might do without even wanting to know about it</aside>
+              <li class="fragment example">Calculating liver volume every time you get sent a new MRI scan and update your plots</li>
+                <aside class="notes">This is something you might have to do regularly</aside>
+              <li class="fragment example">Rewriting every instance of your thesis to change it from first to third person (or v.v.)</li>
+                <aside class="notes">This is something you will hopefully never have to do, but if so, only once</aside>
+          </section>
+          <section>
+            <h1>How does this work?</h1>
+            <h2 class="fragment">Libraries</h2>
+          </section>
+          <section>
+            <section>
+              <div>
+                <div style='float: left'>
+                  <h3>Input</h3>
+                  <pre>X  Y  R</pre>
+                  <pre>1  1  3.4
+  1  2  4.5
+  1  3  4.5
+  1  4  2.5
+     ...
+  20 20 1.0
+  </pre>
+                </div>
+                <div style='float: right'>
+                  <h3>Output</h3>
+                  <p>an image</p><!-- RMV sort this -->
+                </div>
+              </div>
+            </section>
+            <section>
+              <h3>Pseudocode</h3>
+              <pre><code class="python" data-trim>
+import plotting_library
+import numerics_library
+import date_library
+import file_info_library
+
+# Load rainfall data
+X, Y, rainfall = numerics_library.load_csv("rainfall-radar.csv")
+
+# Some clever 3D plotting
+axes = plotting_library.create_axes()
+axes.plot_wireframe(X, Y, rainfall)
+
+# Save image labelled by day data created
+creation_timestamp = file_info_library.created("rainfall-radar.csv")
+d = date_library.make_date(creation_timestamp)
+image_filename = "%d-%d-%d-rainfall.png" % d.year, d.month, d.day
+plotting_library.save_an_image(image_filename)
+              </code></pre>
+            </section>
+            <section>
+              <aside class="notes">Please note, these examples are intentionally very concise for the presentation
+                - even for playing around you should have a little more detail in there, particularly error handling, and don't worry about the syntax for the moment</aside>
+              <h3>Script to plot rainfall</h3>
+              <pre><code class="python" data-trim>
+import matplotlib.pyplot
+import numpy
+import datetime
+import os
+
+# Load rainfall data
+X, Y, rainfall = numpy.loadtxt("rainfall-radar.csv")
+
+# Some clever 3D plotting
+axes = pyplot.figure().add_subplot(111, projection='3d')
+axes.plot_wireframe(X, Y, rainfall)
+
+# Save image labelled by day data created
+creation_timestamp = os.path.getctime("rainfall-radar.csv")
+d = datetime.date(creation_timestamp)
+image_filename = "%d-%d-%d-rainfall.png" % d.year, d.month, d.day
+pyplot.savefig(image_filename)
+              </code></pre>
+            </section>
+          </section>
+          <section>
+            <section>
+              <div>
+                <div style='float: left'>
+                  <h3>Input</h3>
+                  <pre>Files</pre>
+                  <pre style='width: 100%'>university_qub.txt
+somedir/university_uu.txt
+anotherdir/school_st-malachys.txt
+community_glencraig.txt
+school_rudolf-steiner-hw.txt
+college_stranmillis.txt
+...
+</pre>
+                </div>
+                <div style='float: right'>
+                  <h2>Output</h2>
+                  <pre>Files</pre>
+<pre style='width: 100%'>universities/
+   qub.txt   uu.txt  ...
+
+schools/
+   st-malachys.txt
+   rudolf-steiner-hw.txt  ...
+
+colleges/
+   stranmillis.txt  ...
+
+communities/
+   glencraig.txt  ...
+...
+</pre>
+                </div>
+              </div>
+            </section>
+            <section>
+              <h3>Pseudocode</h3>
+              <pre><code class="python" data-trim>
+# Loop through files
+for filename in file_info_directory.list_current_directory():
+    # Skip irrelevant files
+    if filename does not end with '.txt':
+        continue
+
+    # Divide into important parts and find category name
+    institution_type, institution = split(filename)
+    category = pluralization_library.plural(institution_type)
+
+    # Check we have a subdirectory for it
+    if category is not already a directory:
+        directory_library.mkdir(category)
+
+    # Join subdirectory and filename (whether on Win, Mac &amp; Linux)
+    final_location = directory_library.join(category, institution)
+    directory_library.move(filename, final_location)
+              </code></pre>
+            </section>
+            <section>
+              <h3>Script to rearrange files</h3>
+              <pre><code class="python" data-trim>
+pluralizer = inflect.engine()
+
+# Loop through files
+for filename in os.listdir():
+    # Skip irrelevant files
+    if not filename.endswith('txt'):
+        continue
+
+    # Divide into important parts and find category name
+    institution_type, institution = filename.split('_')
+    category = pluralizer.plural(institution_type)
+
+    if not os.file.exists(category):
+        os.mkdir(category)
+
+    final_location = os.path.join(category, institution)
+    os.rename(filename, final_location)
+              </code></pre>
+            </section>
+          </section>
+          <section>
+            <section>
+              <div>
+                <div style='float: left'>
+                  <h3>Input</h3>
+                  <pre style='font-weight: bold; font-family: serif; width: 100%; font-style: italic'>CHAPTER 1</pre>
+                  <pre style='font-family: serif; width: 100%; font-style: italic'>Once there were four children
+whose names were Peter, Susan,
+Edward and Lucy...</pre>
+                </div>
+                <div style='float: right'>
+                  <h2>Output</h2>
+<pre style='width: 100%'>There are ???? verbs in this text.</pre>
+                </div>
+              </div>
+            </section>
+            <section>
+              <h3>Pseudocode</h3>
+              <pre><code class="python" data-trim>
+lines = input.read_everything()
+
+Ummm....
+              </code></pre>
+            </section>
+            <section>
+              <h3>Script to count verbs</h3>
+              <pre><code class="python" data-trim>
+import nltk
+import sys
+import collections
+
+lines = sys.stdin.readlines()
+
+# Natural Language researcher magic...
+tokens = nltk.word_tokenize(lines) RMV check if need to join newlines
+body_of_text = nltk.Text(tokens)
+words_labelled_by_type = nltk.pos_tag(body_of_text)
+
+# Back to more standard Python
+type_of_each_word = [t for word, t in words_labelled_by_type]
+types_by_frequency = collections.Counter(types)
+
+print("There are %d verbs in this text" % types_by_frequency['VB'])
+              </code></pre>
+            </section>
+          </section>
+          <aside class="notes">Note that you can use this input/output method to chain scripts, using one on the output of the previous, and, better yet, with a bit of tidying up, one can be processing while the previous is still producing, so you don't have to wait for one to finish for the next to start</aside>
+          <section>
+            <h2>And... you can mix and match...</h2>
+            <ul>
+              <li>Good scripting is quick to chain</li>
+              <li class="fragment example">Draw a chart of your Facebook friends by starsign?</li>
+              <li class="fragment example">Back up your most listened to music to the cloud?</li><aside class="notes">Zeitgeist+AWS?</aside>
+              <li class="fragment example">Do Bayesian analysis on the stock exchange when the door bell rings?</li>
+              <li class="fragment example">(More seriously) Run a series of simulations over a week, automatically alterating parameters and re-running depending on analysis of the outcome</li>
+            </ul>
+            <aside class="notes">Have a think about what applications you could script - anything you have a manual system for doing on a computer, basically</aside>
+          </section>
+        </div>
+      </div>
+  </body>
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+  <script>
+    // Required, even if empty.
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+        ]
+    });
+  </script>
+</html>
