@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">  
+  <head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/league.css" id="theme"> 
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <style>
+      .reveal .attribution {
+        position: absolute;
+        bottom: -6px;
+        right: 0px;
+        font-size: 0.5em;
+      }
+      html.img-left div.slide-background.present {
+        background-position: left;
+        background-size: contain;
+      }
+      html.img-right div.slide-background.present {
+        background-position: right;
+        background-size: contain;
+      }
+      html.img-right .slides {
+        text-align: left
+      }
+      .reveal .example {
+        color: #F84;
+        padding-top: 0.5em;
+      }
+      html.image-slide div.slide-background.present {
+        background-size: contain;
+      }
+      .reveal ul {
+        font-size: 0.8em;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="reveal">
+        <div class="slides">
+          <section>
+            <h1>Python</h1>
+            <h3>for scientists, engineers and anyone who is still here</h3>
+          </section>
+            <aside class="notes">So I will wrap up with a few final comments</aside>
+          <section>
+            <h2>Why Python?</h2>
+            <p class="fragment">You can do pretty much anything with it</p>
+            <ul class="fragment">
+              <li><span class="example">Analysis</span>: crunch numbers, letters, interwebs</li>
+              <li class="fragment"><span class="example">Control</span>: react to events, automate decisions</li>
+              <li class="fragment"><span class="example">Design</span>: from microchips to buildings</li>
+              <li class="fragment"><span class="example">Observation</span>: sensors, satellites and social networks</li>
+              <li class="fragment"><span class="example">Simulation</span>: view the future</li>
+              <li class="fragment"><span class="example">Solution</span>: figure out optimizations</li>
+            </ul>
+            <p class="fragment">Go through each, and see how it could apply for you...</p>
+          </section>
+          <section>
+            <h2>Today...</h2>
+            <p class="fragment">You have learned:<p>
+            <p class="fragment example">Enough python to get you investigating</p>
+            <p class="fragment example">Basic structures for coding</p>
+            <p class="fragment">How weird &amp; wonderful the possibilities are</p>
+
+          </section>
+          <section>
+            <h2>Next time...</h2>
+            <p class="fragment example">Enough to get you doing useful things<p>
+            <p class="fragment example">Things that are hard in C and easy in Python</p>
+            <p class="fragment example">Why I'm not standing here talking about MATLAB</p>
+            <p class="fragment example">Overview of more applications</p>
+          </section>
+          <section>
+            <h1>Final Points<h1>
+            <h3 class="fragment">Please give feedback</h3>
+            <h3 class="fragment">Let me know what your topic is</h3><aside class="notes">I'll have a look and see what libraries you might be interested in for next time</aside>
+            <h3 class="fragment">Contribute some code to the world</h3><aside class="notes">But check your group/uni IP policy</aside>
+          </section>
+        </div>
+      </div>
+  </body>
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+  <script>
+    // Required, even if empty.
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+        ]
+    });
+  </script>
+</html>
