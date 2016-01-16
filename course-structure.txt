@@ -30,9 +30,9 @@ PREREQUISITES: HFDY1 .or. (familiarity with OOP .and. intermediate knowledge of 
 
 Session 1 (8:50 - 11:10)
  - 9.00 - 9.20 : Recap of HFDY1
- - 9.20 - 10.10 (i) : Further Numpy / matplotlib (+ refreshing)
+ - 9.20 - 10.10 (i) : Further control structures (lambdas / basic classes)
  - 10.10 - 10.20 : Pythonic - how Python differs
- - 10.20 - 11.10 (i) : Further control structures (lambdas / basic classes)
+ - 10.20 - 11.10 (i) : Further Numpy / matplotlib (+ refreshing)
 
 Break (11.10 - 11.25)
 
