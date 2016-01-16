@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">  
+  <head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/sky.css" id="theme"> 
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <style>
+      .reveal .attribution {
+        position: absolute;
+        bottom: -6px;
+        right: 0px;
+        font-size: 0.5em;
+      }
+      html.img-left div.slide-background.present {
+        background-position: left;
+        background-size: contain;
+      }
+      html.img-right div.slide-background.present {
+        background-position: right;
+        background-size: contain;
+      }
+      html.img-right .slides {
+        text-align: left
+      }
+      .reveal .example {
+        color: #400;
+        padding-top: 0.5em;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="reveal">
+        <div class="slides">
+          <section>
+            <h1>Applications of Python</h1>
+            <h2>Statistics</h2>
+          </section>
+            <aside class="notes">Here I will briefly discuss about ways to
+            use Python to do some statistics. As part of quantitative analysis
+            in a thesis, you likely to have to do this somewhere, so having an idea
+            of how Python can contribute will help.</aside>
+          <section>
+            <h2>SciPy + Numpy</h2>
+            <p class="fragment">Cornerstones of science in Python</p>
+            <p class="fragment"><a href="https://scipy.org">scipy.org</a> + <a href="https://numpy.org">numpy.org</a></p>
+          </section>
+          <section>
+            <pre><code data-trim class="python">
+import numpy
+import scipy
+
+s = numpy.loadtxt("data.csv")
+# s is, say, a list: [0.3, 0.9, 0.1324, 10.3]
+
+print(x.max(), x.min(), x.mean(), x.var())
+# Or, in Python 2:    print x.max(), x.min()...
+
+height_distribution = scipy.stats.norm(loc=170, scale=20)
+for i in range(100):
+    print(height_distribution.rvs())
+
+# use matplotlib to plot such data, and more complicated operations
+            </code></pre><aside class="notes">loc=mean, scale=stddev</aside>
+          </section>
+          <aside class="notes">Naturally, you can do much much more than this with numpy and scipy,
+            and only a small part of their functionality is related to stats, but this should give you an idea of
+            where to start when you set out to play with numbers, and how easy it is.</aside>
+          <section>
+            <h2>Pandas + Patsy<br/>+ statsmodule</h2>
+            <p class="fragment">Bringing the Power of R</p>
+          </section>
+          <section>
+            <pre><code data-trim>
+import pandas
+import statsmodule as sm
+
+# City, HealthIndex, Population, InfectionRate, SurvivalRate
+data_frame = pandas.read_csv("infection_rates_by_city_2014.csv")
+
+y, X = sm.dmatrices('Infection Rate ~ HealthIndex + Population')
+model = sm.OLS(y, X)
+fitted_results = model.fit()
+
+print(fitted_results.summary())  # Lots of detailed statistical output
+            </code></pre>
+          </section>
+          <aside class="notes">While we have only shown CSV, these libraries are also capable of handling XLS and other formats</aside>
+          <section>
+            <h2>logging + watchdog</h2>
+            <p class="fragment">Keeping an eye...</p>
+            <p class="fragment">Logging in two senses</p>
+          </section>
+          <section>
+            <h2>Essential logging</h2>
+            <pre><code data-trim>
+import logging
+
+logging.basicConfig(filename="very-important.log", level=logging.INFO)
+
+logging.info("Starting up (just so you know)...")
+# Some commands here
+logging.debug("Starting internal process #17 - purchasing shrubbery")
+# Some more commands here
+
+if oh_no:
+    logging.warn("World might have ended")
+            </code></pre>
+          </section>
+          <section>
+            <h2>logging benefits</h2>
+            <ul>
+              <li class="fragment example">Easily set level of detail</li><aside class="notes">INFO, WARN, DEBUG (testing vs production)</aside>
+              <li class="fragment example">Lots of libraries use it</li><aside class="notes">So you can turn their logging on and off from your code before calling their routines</aside>
+              <li class="fragment example">Can rotate logs</li><aside class="notes">That is, each time you run, it backs up the previous logfile before starting a new one, renumbers the last few backups, and clears oldest ones</aside>
+              <li class="fragment example">Formatting can be globally set:<br/>add time/date, line number, etc.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>watchdog</h2>
+            <aside class="notes">Of course, if you're logging something, it might be because you are monitoring something</aside>
+            <pre><code data-trim>
+import logging
+import watchdog
+
+logging.basicConfig(format='%(asctime)s - %(asctime)s')
+responder = watchdog.events.LoggingEventHandler()
+observer = watchdog.observers.Observer()
+
+observer.schedule(responder, '.')
+observer.start()
+            </code></pre>
+            <p class='attribution'>Based on watchdog's PyPI page</p>
+            <aside class="notes">Watch for any files being added or changed in the current directory and log when and what</aside>
+          </section>
+          <aside class="notes">However, for the moment, we will go back to some more numpy and matplotlib, which form a firm basis for analysis and computation in Python</aside>
+        </div>
+      </div>
+  </body>
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+  <script>
+    // Required, even if empty.
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+        ]
+    });
+  </script>
+</html>
