@@ -24,6 +24,39 @@ repeats = 100  # Keep this <= 100, please!
 timeout = 5  # Number of seconds until giving up on connection
 
 
-# IN HERE WE WILL WRITE THE NETWORK LATENCY CODE
+# Define our actual measured operation
+def round_trip(skt):
+    # Create a random message to test our connection
+    payload = os.urandom(1024)
+    
+    # Network-limited part
+    skt.sendall(payload)
+    received_payload = skt.recv(1024)
+    
+    if received_payload != payload:
+        raise IOError("We received an incorrect echo")
 
-logger.info("Average time taken: {delay} ms".format(delay=return_time))
+
+# Use a `with` context to make sure the socket automatically
+# gets cleaned up
+try:
+    with socket.create_connection(address=(host, port), timeout=timeout) as skt:
+        logger.info("Created connection")
+        # This is going to add a bit of misleading overhead, but for this
+        # purpose we'll use lambda for simplicity
+        return_time_total = timeit.timeit(
+            lambda: round_trip(skt),
+            number=repeats
+        )
+        average_return_time = return_time_total / repeats
+        logger.info("Completed trial")
+        
+        
+except OSError as e:
+    logger.error(
+        "We could not create a socket connection to the "
+        "remote echo server"
+    )
+    raise e
+
+logger.info("Average time taken: {delay} s".format(delay=average_return_time))

@@ -24,6 +24,16 @@ repeats = 100  # Keep this <= 100, please!
 timeout = 5  # Number of seconds until giving up on connection
 
 
-# IN HERE WE WILL WRITE THE NETWORK LATENCY CODE
+# Define our actual measured operation
+def round_trip(skt):
+    # Create a random message to test our connection
+    payload = os.urandom(1024)
+    
+    # Network-limited part
+    skt.sendall(payload)
+    received_payload = skt.recv(1024)
+    
+    if received_payload != payload:
+        raise IOError("We received an incorrect echo")
 
 logger.info("Average time taken: {delay} ms".format(delay=average_return_time))
