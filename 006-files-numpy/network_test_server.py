@@ -27,7 +27,7 @@ class EchoServerHandler(socketserver.BaseRequestHandler):
 
 
 if __name__ == "__main__":
-    HOST, PORT = "flaxandteal.co.uk", 9998
+    HOST, PORT = '143.117.100.160', 443
 
     server = socketserver.TCPServer((HOST, PORT), EchoServerHandler)
 

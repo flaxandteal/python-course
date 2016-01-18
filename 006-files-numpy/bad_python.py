@@ -1,11 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Antipythonic Example
-
-The Ghost of Coding Future (E Scrooge)
-"""
-
-
 from numpy import *
 from sympy import *
 from sys import *

@@ -1,14 +1,18 @@
 # -*- coding: utf-8 -*-
-"""
-Less Antipythonic Example
+"""Less Antipythonic Example
+
+This is an improved version of the bad_python.py
+idea, with the same functionality but should be
+much more readable and a bit more Pythonic!
 
 Created on Sat Dec 24 14:20:13 18
 
 @author: The Ghost of Coding Future (E Scrooge)
 """
+# pylint: disable-msg=C0103
 
-import numpy as np
 import logging
+import numpy as np
 
 # Indicates whether to output both cos and sin (rounded) [True]
 # or just sin [False]
@@ -30,11 +34,16 @@ logger = logging.getLogger(__name__)
 # I would rather not use this approach, but keeping track of the output line
 # number is not a common logging module (or print) use
 class Outputter:
+    """
+    This is a class for providing output with additional functionality beyond
+    the basic logging library system.
+    """
     line_number = 1
 
-    def write(self, message):
+    def write(self, line):
+        """This wraps the logger, printing incrementing line numbers beside output"""
         # Supply additional fields for logging format as a dict
-        logger.info(message, extra={"line_number": self.line_number})
+        logger.info(line, extra={"line_number": self.line_number})
         self.line_number += 1
 
 # Object for managing output - can keep track of its own variables (say we want
@@ -54,7 +63,7 @@ if newversion:
     task = "SIN AND COS"
 else:
     task = "SIN"
-    
+
 header = """
 PRINTING VALUES OF {task} FOR x IN 1, 2,..., {max_x}
 """.format(
@@ -70,7 +79,7 @@ if newversion:
     raise NotImplementedError("""
         The cos and sin version is still to be implemented
     """)
-    
+
 # NOTE: the output starts with the line number, not x
 # (bad idea - only for compatibility)
 for sinx in sin_values:

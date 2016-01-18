@@ -5,23 +5,24 @@ PREREQUISITES: basic use of MATLAB .or. (intermediate knowledge of a programming
 
 Paper survey to be taken on areas of interest and potential uses of Python.
 
-Session 1 (8:50 - 11:00)
- - 9.00 - 9.20 : What is Python, why use it, who uses it and what are the benefits?
- - 9.20 - 10.50 (i) : Basic control structures and variables
- - 12.00 - 12:10 : Applications of Python - Scripting tasks
+Session 1 (10:00 - 11:30)
+ - 10.00 - 10.15 : What is Python, why use it, who uses it and what are the benefits?
+ - 10.15 - 11.20 (i) : Basic control structures and variables
+ - 11.20 - 11:30 : Applications of Python - Scripting tasks (i)
 
-Break (11.00 - 11:15)
+Break (11.30 - 11:45)
 
-Session 2 (11:15 - 13:45)
- - 11.15 - 12.15 (i) : Modules - General usage / core modules / virtualenv
- - 12:15 - 12:25 : Applications of Python - Statistics / Data Analysis / Logging
- - 12:25 - 13:25 (i) : File operations / Matplotlib / Basic Numpy
- - 13.25 - 13:30 : Applications of Python - Engineering
- - 13.30 - 13:35 : Closing comments
- - 13:35 - 13:45 : Installing on your own device
+Session 2 (11:45 - 13:00)
+ - 11:45 - 12:50 (i) : Plotting
+ - 12:50 - 13:00 : Applications of Python - Statistics / Data Analysis / Logging
+
+Session 2 (14:00 - 16:00)
+ - 14:00 - 15:20 (i) : Networking / Threading
+ - 15.20 - 15:30 : Applications of Python - Engineering
+ - 15.30 - 15:35 : Closing comments
+ - 15:35 - 16:00 : Installing on your own device
 
 Approx. 3.5h of interactive sessions, marked (i)
-Afterwards: assistance available with installs
 
 HFDY2 : 2016/02/01, Tue
 -----

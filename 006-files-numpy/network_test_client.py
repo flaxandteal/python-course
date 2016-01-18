@@ -18,8 +18,8 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Parameters
-host = 'flaxandteal.co.uk'
-port = 9998
+host = '143.117.100.160'
+port = 443
 repeats = 100  # Keep this <= 100, please!
 timeout = 5  # Number of seconds until giving up on connection
 
