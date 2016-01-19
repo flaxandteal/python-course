@@ -72,16 +72,16 @@
                   <h3>Input</h3>
                   <pre>X  Y  R</pre>
                   <pre>1  1  3.4
-  1  2  4.5
-  1  3  4.5
-  1  4  2.5
-     ...
-  20 20 1.0
-  </pre>
+1  2  4.5
+1  3  4.5
+1  4  2.5
+   ...
+20 20 1.0
+</pre>
                 </div>
                 <div style='float: right'>
                   <h3>Output</h3>
-                  <p>an image</p><!-- RMV sort this -->
+                  <p><img src="../scratch/2016-1-19-rainfall.png" style="max-height: 400px; max-width: 400px"/></p><!-- RMV sort this -->
                 </div>
               </div>
             </section>
@@ -112,22 +112,24 @@ plotting_library.save_an_image(image_filename)
                 - even for playing around you should have a little more detail in there, particularly error handling, and don't worry about the syntax for the moment</aside>
               <h3>Script to plot rainfall</h3>
               <pre><code class="python" data-trim>
-import matplotlib.pyplot
+from matplotlib import pyplot
+from mpl_toolkits.mplot3d import Axes3D, axes3d
 import numpy
 import datetime
 import os
 
 # Load rainfall data
-X, Y, rainfall = numpy.loadtxt("rainfall-radar.csv")
+X, Y, rainfall = numpy.loadtxt("rainfall-radar.csv").T
 
 # Some clever 3D plotting
-axes = pyplot.figure().add_subplot(111, projection='3d')
-axes.plot_wireframe(X, Y, rainfall)
+fig = pyplot.figure()
+axes = Axes3D(fig)
+axes.plot_trisurf(X, Y, rainfall)
 
 # Save image labelled by day data created
 creation_timestamp = os.path.getctime("rainfall-radar.csv")
-d = datetime.date(creation_timestamp)
-image_filename = "%d-%d-%d-rainfall.png" % d.year, d.month, d.day
+d = datetime.date.fromtimestamp(creation_timestamp)
+image_filename = "%d-%d-%d-rainfall.png" % (d.year, d.month, d.day)
 pyplot.savefig(image_filename)
               </code></pre>
             </section>
@@ -246,7 +248,7 @@ import collections
 lines = sys.stdin.readlines()
 
 # Natural Language researcher magic...
-tokens = nltk.word_tokenize(lines) RMV check if need to join newlines
+tokens = nltk.word_tokenize(lines)
 body_of_text = nltk.Text(tokens)
 words_labelled_by_type = nltk.pos_tag(body_of_text)
 
@@ -258,7 +260,7 @@ print("There are %d verbs in this text" % types_by_frequency['VB'])
               </code></pre>
             </section>
           </section>
-          <aside class="notes">Note that you can use this input/output method to chain scripts, using one on the output of the previous, and, better yet, with a bit of tidying up, one can be processing while the previous is still producing, so you don't have to wait for one to finish for the next to start</aside>
+          <aside class="notes">Note that you can use this input/output method to chain scripts, using one on the output of the previous, and, better yet, with a bit of tidying up, one can be processing while the previous is still producing, so you don't have to wait for one to finish for the next to start [check if need to join newlines]</aside>
           <section>
             <h2>And... you can mix and match...</h2>
             <ul>
