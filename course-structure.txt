@@ -29,20 +29,19 @@ HFDY2 : 2016/02/01, Tue
 
 PREREQUISITES: HFDY1 .or. (familiarity with OOP .and. intermediate knowledge of MATLAB/C++/any scripting language)
 
-Session 1 (8:50 - 11:10)
- - 9.00 - 9.20 : Recap of HFDY1
- - 9.20 - 10.10 (i) : Further control structures (lambdas / basic classes)
- - 10.10 - 10.20 : Pythonic - how Python differs
- - 10.20 - 11.10 (i) : Further Numpy / matplotlib (+ refreshing)
+Session 1 (10:00 - 10:45)
+ - 10.00 - 10.45 : Recap of HFDY1
 
-Break (11.10 - 11.25)
+Break (10.45 - 11.00)
 
-Session 2 (11.25 - 13:30)
- - 11.25 - 11.35 : Applications of Python - Embedded / Control / Network
+Session 2 (11:00 - 12:45)
+ - 11.00 - 12.45 : Applications of Python - Embedded / Control / Network
+
+Lunch (12:45 - 13:45)
+
+Session 3 (13:45 - 16:00)
  - 11.35 - 12.35 (i) : Threading and basic sockets / network usage [1]
- - 12.35 - 12.45 : Github and PyPI - "How many goodly creatures..."
- - 12.45 - 13.35 (i) : Error handling and brief introduction to unit testing
- - 13.35 - 13.45 : Closing presentation
+ - 15.50 - 16.00 : Closing presentation
 
 Approx. 3.5h of interactive sessions, marked (i)
 Afterwards: individual questions; PhD project-related pointers (at least for survey respondents in HSDY1 and any topics I happen to know off-hand for others)
