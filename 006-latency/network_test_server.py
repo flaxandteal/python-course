@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # -*- coding: utf-8 -*-
 """
 Server for network echo example
@@ -7,28 +9,58 @@ Created on Sat Jan 16 19:07:16 2016
 @author: phil
 """
 
-# Based on the Python docs
+# Based on the Python documenation
+# https://docs.python.org/3/library/asyncio-protocol.html
 
-import socketserver
+import argparse
 import logging
+import asyncio
+
+DELAY = 0.01
 
 logging.basicConfig()
 logger = logging.getLogger(__name__)
 
 
-class EchoServerHandler(socketserver.BaseRequestHandler):
-    def handle(self):
-        logger.info("New connection")
-        while True:
-            message = self.request.recv(1024)
-            if not message:
-                break
-            self.request.sendall(message)
+class EchoServerClientProtocol(asyncio.Protocol):
+    """Return message to client"""
+    transport = None
+
+    def connection_made(self, transport):
+        """Store the transport for communication"""
+        self.transport = transport
+
+    def data_received(self, data):
+        """Handle new message"""
+        yield from asyncio.sleep(DELAY)
+        self.transport.write(data)
+
+
+def parse_args():
+    """Parse arguments from CL"""
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--host', required=True)
+    parser.add_argument('--port', type=int, required=True)
+    args = parser.parse_args()
+
+    return {'host': args.host, 'port': args.port}
+
+
+def run(host, port):
+    """Run server with host and port"""
+    loop = asyncio.get_event_loop()
+    coro = loop.create_server(EchoServerClientProtocol, host, port)
+    server = loop.run_until_complete(coro)
+
+    try:
+        loop.run_forever()
+    except KeyboardInterrupt:
+        pass
+
+    server.close()
+    loop.run_until_complete(server.wait_closed())
+    loop.close()
 
 
 if __name__ == "__main__":
-    HOST, PORT = '143.117.100.160', 443
-
-    server = socketserver.TCPServer((HOST, PORT), EchoServerHandler)
-
-    server.serve_forever()
+    run(**parse_args())
