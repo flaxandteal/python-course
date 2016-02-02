@@ -88,12 +88,42 @@ G.add_edge('River Valley', 'High Ground', weight=10, capacity=2)
 flow_cost, flow_dict = networkx.capacity_scaling(G)
 print("Total cost to satisfy these demands: ", flow_cost)
             </code></pre><aside class="notes">Can import GIS data, or be used for internet routing analysis, traffic analysis, powers grids</aside>
+            <pre class="fragment"><code data-trim>
+Total cost to satisfy these demands: 40
+            </code></pre>
             <p class="attribution">Based on networkx docs</p>
           </section>
           <section>
-            <h2>FEniCS</h2>
-            <p>2D/3D physics simulation</p>
-            <p class="fragment example">Fluid flow, structural dynamics, electromagnetics, coupled problems, hyperelasticity<br/>[define your equations inline]</p>
+            <section>
+              <h2>FEniCS</h2>
+              <p>2D/3D physics simulation</p>
+              <p class="fragment example">Fluid flow, structural dynamics, electromagnetics, coupled problems, hyperelasticity<br/>[define your equations inline]</p>
+            </section>
+            <section>
+              <h2>dolfin-adjoint</h2>
+              <p>Optimization - <a href='https://www.youtube.com/watch?v=IslG6LsZwx8'>fluid flow example</a></p>
+            </section>
+          </section>
+          <section>
+            <h2>PyOpenCV</h2>
+<pre class="fragment"><code data-trim>
+from pyopencv import *
+
+mg = imread('people.jpg')
+hog = HOGDescriptor()
+hog.setSVMDetector(HOGDescriptor.getDefaultPeopleDetector())
+for r in hog.detectMultiScale(img, 0, Size(8,8), Size(24,16), 1.05, 2):
+    r.x += round(r.width*0.1)
+    r.y += round(r.height*0.1)
+    r.width = round(r.width*0.8)
+    r.height = round(r.height*0.8)
+    rectangle(img, r.tl(), r.br(), Scalar(0,255,0), 1)
+
+namedWindow("people detector", 1)
+imshow("people detector", img)
+waitKey(0)
+</code></pre>
+            <p class="attribution">PyOpenCV docs</p>
           </section>
           <section>
             <h2>VTK &amp; Paraview</h2>
@@ -114,7 +144,7 @@ reader.Update()
           <section data-background='../scratch/paraview.png' data-state='image-slide'>
           </section>
           <section>
-            <h1>FreeCAD</h1>
+            <h1>FreeCAD + PythonOCC</h1>
             <p>CAD with Python bindings</p>
             <aside class="notes">Another piece of Python-scriptable software, with an extensive Python API and underlying CAD libraries you can use directly from your scripts (OpenCascade)</aside>
           </section>

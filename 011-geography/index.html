@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">  
+  <head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/sky.css" id="theme"> 
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <style>
+      .reveal .attribution {
+        position: absolute;
+        bottom: -6px;
+        right: 0px;
+        font-size: 0.5em;
+      }
+      html.img-left div.slide-background.present {
+        background-position: left;
+        background-size: contain;
+      }
+      html.img-right div.slide-background.present {
+        background-position: right;
+        background-size: contain;
+      }
+      html.img-right .slides {
+        text-align: left
+      }
+      .reveal .example {
+        color: #400;
+        padding-top: 0.5em;
+      }
+      html.image-slide div.slide-background.present {
+        background-size: contain;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="reveal">
+        <div class="slides">
+          <section>
+            <h1>Applications of Python</h1>
+            <h2>Geo-stuff</h2>
+          </section>
+          <section>
+            <h1>geopy</h1>
+            <pre><code data-trim>
+from geopy.distance import vincenty
+from geopy.geocoders import Nominatim
+
+geolocator = Nominatim()
+location1 = geolocator.geocode("University Road, Belfast")
+location2 = geolocator.geocode("Tipperary")
+coords1 = (location1.latitude, location1.longitude)
+coords2 = (location2.latitude, location2.longitude)
+print("It is ", vincenty(coords1, coords2).kilometers, "km to Tipperary")
+            </code></pre><aside class="notes">Can also do this in reverse</aside>
+            <pre class="fragment"><code data-trim>
+It is  248.19342204260664 km to Tipperary
+            </code></pre>
+            <p class="attribution">Based on geopy docs</p>
+          </section>
+          <section>
+            <section>
+            <h2>CartoPy / OWSlib</h2>
+            <pre><code data-trim>
+import cartopy.crs as ccrs
+import matplotlib.pyplot as plt
+from owslib.wms import WebMapService
+
+ax = plt.axes(projection=ccrs.InterruptedGoodeHomolosine())
+ax.coastlines()
+
+ax.add_wms(wms='http://vmap0.tiles.osgeo.org/wms/vmap0',
+           layers=['basic'])
+
+plt.show()
+            </code></pre>
+            <p class="attribution">Based on cartopy docs</p>
+            </section>
+            <section>
+               <img src='data/cartopy.png'/>
+            </section>
+          </section>
+          <section>
+            <h2>PySAL</h2>
+            <pre><code data-trim>
+import pysal
+import numpy as np
+
+input_file = pysal.open('usjoin.csv')
+pci = np.array([input_file.by_col[str(y)] for y in range(1929, 2010)])
+pci = pci.transpose()
+
+weights = pysal.open("states48.gal").read()
+maxp = pysal.Maxp(weights, pci, floor=5, floor_variable=np.ones((48, 1)), initial=99)
+
+names = input_file.by_col('Name')
+names = np.array(names)
+
+for region in maxp.regions:
+    ids = map(int, region)
+    print(", ".join(names[ids]))
+            </code></pre>
+            <p class="attribution">From the PySAL docs</p>
+            <aside class="notes">"The goal is to form contiguous regions of states displaying similar levels of income throughout this period"</aside>
+          </section>
+          <section>
+            <h1>QGIS + ArcGIS</h1>
+            <img src='data/qgis.png'/>
+          </section>
+        </div>
+      </div>
+  </body>
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+  <script>
+    // Required, even if empty.
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+        ]
+    });
+  </script>
+</html>

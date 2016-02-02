@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key attr.name="capacity" attr.type="long" for="edge" id="d2" />
+  <key attr.name="weight" attr.type="long" for="edge" id="d1" />
+  <key attr.name="demand" attr.type="long" for="node" id="d0" />
+  <graph edgedefault="directed">
+    <node id="Beach">
+      <data key="d0">-5</data>
+    </node>
+    <node id="High Ground">
+      <data key="d0">5</data>
+    </node>
+    <node id="River Valley" />
+    <node id="Seatown" />
+    <edge source="Beach" target="River Valley">
+      <data key="d1">5</data>
+      <data key="d2">4</data>
+    </edge>
+    <edge source="Beach" target="Seatown">
+      <data key="d1">3</data>
+      <data key="d2">6</data>
+    </edge>
+    <edge source="River Valley" target="High Ground">
+      <data key="d1">10</data>
+      <data key="d2">2</data>
+    </edge>
+    <edge source="Seatown" target="High Ground">
+      <data key="d1">5</data>
+      <data key="d2">6</data>
+    </edge>
+  </graph>
+</graphml>

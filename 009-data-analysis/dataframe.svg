@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="185.63197mm"
+   height="76.115501mm"
+   viewBox="0 0 657.75109 269.70059"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="dataframe.svg"
+   inkscape:export-filename="/home/phil/Work/Flax &amp; Teal/Sync/PythonCourse/009-data-analysis/dataframe.png"
+   inkscape:export-xdpi="400"
+   inkscape:export-ydpi="400">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="374.21059"
+     inkscape:cy="202.02507"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1366"
+     inkscape:window-height="685"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(19.917051,-81.615761)">
+    <rect
+       style="opacity:0.80199998;fill:#668080;fill-opacity:1;stroke:#668080;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3336"
+       width="502.04581"
+       height="25.253813"
+       x="132.32999"
+       y="82.615761" />
+    <rect
+       style="opacity:0.80199998;fill:#e0944a;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3338"
+       width="506.08643"
+       height="239.40616"
+       x="131.31982"
+       y="111.91019" />
+    <rect
+       style="opacity:0.80199998;fill:#c87137;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3340"
+       width="505.66803"
+       height="26.263966"
+       x="131.31982"
+       y="137.16397" />
+    <rect
+       style="opacity:0.80199998;fill:#c87137;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3340-2"
+       width="504.95374"
+       height="27.274118"
+       x="131.31982"
+       y="188.37019" />
+    <rect
+       style="opacity:0.80199998;fill:#c87137;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3340-7"
+       width="505.66803"
+       height="27.274118"
+       x="132.16599"
+       y="240.58656" />
+    <rect
+       style="opacity:0.80199998;fill:#c87137;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3340-2-1"
+       width="504.95374"
+       height="27.274118"
+       x="132.16599"
+       y="292.80292" />
+    <rect
+       style="opacity:0.80199998;fill:#68b630;fill-opacity:1;stroke:none;stroke-width:1.0567497;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3336-8"
+       width="148.4014"
+       height="25.157213"
+       x="-18.125185"
+       y="111.94346" />
+    <rect
+       style="opacity:0.80199998;fill:#467a20;fill-opacity:1;stroke:none;stroke-width:0.70879745;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3336-8-7"
+       width="65.816109"
+       height="25.519276"
+       x="64.124489"
+       y="137.76468" />
+    <rect
+       style="opacity:0.80199998;fill:#68b630;fill-opacity:1;stroke:none;stroke-width:1.0567497;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3336-8-6"
+       width="148.4014"
+       height="25.157213"
+       x="-18.637144"
+       y="163.94797" />
+    <rect
+       style="opacity:0.80199998;fill:#467a20;fill-opacity:1;stroke:none;stroke-width:0.70879745;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3336-8-7-9"
+       width="65.816109"
+       height="25.519276"
+       x="63.61253"
+       y="189.7692" />
+    <rect
+       style="opacity:0.80199998;fill:#68b630;fill-opacity:1;stroke:none;stroke-width:1.0567497;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3336-8-0"
+       width="148.4014"
+       height="25.157213"
+       x="-19.405092"
+       y="215.95248" />
+    <rect
+       style="opacity:0.80199998;fill:#467a20;fill-opacity:1;stroke:none;stroke-width:0.70879745;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3336-8-7-1"
+       width="65.816109"
+       height="25.519276"
+       x="62.844585"
+       y="241.77371" />
+    <rect
+       style="opacity:0.80199998;fill:#68b630;fill-opacity:1;stroke:none;stroke-width:1.0567497;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3336-8-6-8"
+       width="148.4014"
+       height="25.157213"
+       x="-19.917051"
+       y="267.957" />
+    <rect
+       style="opacity:0.80199998;fill:#467a20;fill-opacity:1;stroke:none;stroke-width:0.70879745;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3336-8-7-9-8"
+       width="65.816109"
+       height="25.519276"
+       x="62.332626"
+       y="293.77823" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.35229683px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-17.739927"
+       y="123.10407"
+       id="text4268"
+       sodipodi:linespacing="125%"
+       transform="scale(0.91559797,1.0921824)"><tspan
+         sodipodi:role="line"
+         id="tspan4270"
+         x="-17.739927"
+         y="123.10407">APPLES</tspan></text>
+    <g
+       id="g4280"
+       transform="translate(-3.967954,-7.750704e-5)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text4272"
+         y="132.47826"
+         x="69.46048"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.9951725px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:0.50310531;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="132.47826"
+           x="69.46048"
+           id="tspan4274"
+           sodipodi:role="line">EUR</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4276"
+         y="157.32021"
+         x="69.257812"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.9951725px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:0.50310531;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="157.32021"
+           x="69.257812"
+           id="tspan4278"
+           sodipodi:role="line">GBP</tspan></text>
+    </g>
+    <g
+       transform="translate(-3.967954,156.47069)"
+       id="g4280-0">
+      <text
+         sodipodi:linespacing="125%"
+         id="text4272-9"
+         y="132.47826"
+         x="69.46048"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.9951725px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:0.50310513;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="132.47826"
+           x="69.46048"
+           id="tspan4274-7"
+           sodipodi:role="line">EUR</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4276-9"
+         y="157.32021"
+         x="69.257812"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.9951725px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:0.50310513;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="157.32021"
+           x="69.257812"
+           id="tspan4278-1"
+           sodipodi:role="line">GBP</tspan></text>
+    </g>
+    <g
+       transform="translate(-3.967954,52.156844)"
+       id="g4280-5">
+      <text
+         sodipodi:linespacing="125%"
+         id="text4272-1"
+         y="132.47826"
+         x="69.46048"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.9951725px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:0.50310513;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="132.47826"
+           x="69.46048"
+           id="tspan4274-1"
+           sodipodi:role="line">EUR</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4276-8"
+         y="157.32021"
+         x="69.257812"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.9951725px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:0.50310513;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="157.32021"
+           x="69.257812"
+           id="tspan4278-6"
+           sodipodi:role="line">GBP</tspan></text>
+    </g>
+    <g
+       transform="translate(-3.967954,104.31377)"
+       id="g4280-4">
+      <text
+         sodipodi:linespacing="125%"
+         id="text4272-4"
+         y="132.47826"
+         x="69.46048"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.9951725px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:0.50310513;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="132.47826"
+           x="69.46048"
+           id="tspan4274-3"
+           sodipodi:role="line">EUR</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4276-82"
+         y="157.32021"
+         x="69.257812"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.9951725px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:0.50310513;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="157.32021"
+           x="69.257812"
+           id="tspan4278-5"
+           sodipodi:role="line">GBP</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.35229683px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-18.167561"
+       y="170.05444"
+       id="text4268-5"
+       sodipodi:linespacing="125%"
+       transform="scale(0.91559797,1.0921824)"><tspan
+         sodipodi:role="line"
+         id="tspan4270-7"
+         x="-18.167561"
+         y="170.05444">ORANGES</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.35229683px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-18.167562"
+       y="218.14891"
+       id="text4268-2"
+       sodipodi:linespacing="125%"
+       transform="scale(0.91559797,1.0921824)"><tspan
+         sodipodi:role="line"
+         id="tspan4270-8"
+         x="-18.167562"
+         y="218.14891">KUMQUATS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.35229683px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-18.167564"
+       y="266.24338"
+       id="text4268-7"
+       sodipodi:linespacing="125%"
+       transform="scale(0.91559797,1.0921824)"><tspan
+         sodipodi:role="line"
+         id="tspan4270-0"
+         x="-18.167564"
+         y="266.24338">LYCHEES</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:23.49765396px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="137.0405"
+       y="104.38726"
+       id="text4375"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4377"
+         x="137.0405"
+         y="104.38726">HIGHEST PRICE</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:23.49765396px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="269.57553"
+       y="104.38726"
+       id="text4375-9"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4377-3"
+         x="269.57553"
+         y="104.38726">LOWEST PRICE</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:23.49765396px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="398.64557"
+       y="104.38729"
+       id="text4375-9-1"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4377-3-7"
+         x="398.64557"
+         y="104.38729">OPENING PRICE</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:23.49765396px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="533.03925"
+       y="104.38726"
+       id="text4375-9-1-3"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4377-3-7-4"
+         x="533.03925"
+         y="104.38726">CLOSING PRICE</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.04938126px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="172.95293"
+       y="133.78764"
+       id="text4433"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4435"
+         x="172.95293"
+         y="133.78764">100.0</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.04938126px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="179.5759"
+       y="158.3065"
+       id="text4437"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4439"
+         x="179.5759"
+         y="158.3065">83.3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.04938126px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="172.95293"
+       y="186.27489"
+       id="text4433-1"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4435-1"
+         x="172.95293"
+         y="186.27489">103.0</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.04938126px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="179.5759"
+       y="210.79375"
+       id="text4437-4"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4439-3"
+         x="179.5759"
+         y="210.79375">87.2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.04938126px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="172.95293"
+       y="237.79265"
+       id="text4433-0"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4435-3"
+         x="172.95293"
+         y="237.79265">102.0</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.04938126px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="179.5759"
+       y="262.31152"
+       id="text4437-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4439-38"
+         x="179.5759"
+         y="262.31152">85.3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.04938126px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="175.98338"
+       y="288.30029"
+       id="text4433-6"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4435-5"
+         x="175.98338"
+         y="288.30029">101.8</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.04938126px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="179.5759"
+       y="312.81915"
+       id="text4437-8"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4439-4"
+         x="179.5759"
+         y="312.81915">83.9</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.04938126px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="294.18097"
+       y="134.27237"
+       id="text4433-2"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4435-7"
+         x="294.18097"
+         y="134.27237">96.3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.04938126px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="295.23782"
+       y="158.79123"
+       id="text4437-9"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4439-7"
+         x="295.23782"
+         y="158.79123">76.2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.04938126px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="294.22794"
+       y="186.75961"
+       id="text4433-1-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4435-1-4"
+         x="294.22794"
+         y="186.75961">98.3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.04938126px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="295.03821"
+       y="211.27847"
+       id="text4437-4-4"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4439-3-9"
+         x="295.03821"
+         y="211.27847">79.4</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.04938126px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="295.49615"
+       y="238.27737"
+       id="text4433-0-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4435-3-1"
+         x="295.49615"
+         y="238.27737">97.3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.04938126px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="295.26132"
+       y="262.79623"
+       id="text4437-5-9"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4439-38-4"
+         x="295.26132"
+         y="262.79623">78.0</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.04938126px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="294.06354"
+       y="288.785"
+       id="text4433-6-4"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4435-5-2"
+         x="294.06354"
+         y="288.785">96.8</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.04938126px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="296.52954"
+       y="313.30386"
+       id="text4437-8-1"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4439-4-9"
+         x="296.52954"
+         y="313.30386">77.0</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.04938126px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="433.04184"
+       y="134.27237"
+       id="text4433-4"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4435-0"
+         x="433.04184"
+         y="134.27237">99.9</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.04938126px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="433.13577"
+       y="158.79123"
+       id="text4437-2"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4439-0"
+         x="433.13577"
+         y="158.79123">83.6</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.04938126px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="429.63641"
+       y="186.75961"
+       id="text4433-1-2"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4435-1-5"
+         x="429.63641"
+         y="186.75961">102.1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.04938126px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="437.24579"
+       y="211.27847"
+       id="text4437-4-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4439-3-6"
+         x="437.24579"
+         y="211.27847">87.1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.04938126px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="429.73035"
+       y="238.27737"
+       id="text4433-0-51"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4435-3-3"
+         x="429.73035"
+         y="238.27737">100.1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.04938126px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="435.88361"
+       y="262.79623"
+       id="text4437-5-3"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4439-38-5"
+         x="435.88361"
+         y="262.79623">85.1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.04938126px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="426.45407"
+       y="288.785"
+       id="text4433-6-48"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4435-5-5"
+         x="426.45407"
+         y="288.785">100.4</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.04938126px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="435.93057"
+       y="313.30386"
+       id="text4437-8-4"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4439-4-5"
+         x="435.93057"
+         y="313.30386">86.1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.04938126px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="555.15289"
+       y="135.28252"
+       id="text4433-01"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4435-15"
+         x="555.15289"
+         y="135.28252">99.3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.04938126px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="557.73633"
+       y="159.80138"
+       id="text4437-23"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4439-1"
+         x="557.73633"
+         y="159.80138">80.1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.04938126px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="555.17639"
+       y="187.76976"
+       id="text4433-1-8"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4435-1-55"
+         x="555.17639"
+         y="187.76976">98.9</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.04938126px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="554.91803"
+       y="212.28862"
+       id="text4437-4-7"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4439-3-4"
+         x="554.91803"
+         y="212.28862">80.3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.04938126px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="554.69489"
+       y="239.28752"
+       id="text4433-0-9"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4435-3-7"
+         x="554.69489"
+         y="239.28752">99.4</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.04938126px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="560.64856"
+       y="263.8064"
+       id="text4437-5-6"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4439-38-9"
+         x="560.64856"
+         y="263.8064">81.1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.04938126px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="554.89453"
+       y="289.79517"
+       id="text4433-6-1"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4435-5-4"
+         x="554.89453"
+         y="289.79517">99.2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.04938126px;line-height:125%;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="558.15906"
+       y="314.31403"
+       id="text4437-8-49"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4439-4-97"
+         x="558.15906"
+         y="314.31403">83.1</tspan></text>
+  </g>
+</svg>

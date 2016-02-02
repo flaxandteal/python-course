@@ -41,13 +41,15 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--host', required=True)
     parser.add_argument('--port', type=int, required=True)
-    args = parser.parse_args()
 
-    return {'host': args.host, 'port': args.port}
+    return parser.parse_args()
 
 
-def run(host, port):
+def run():
     """Run server with host and port"""
+    args = parse_args()
+    host, port = args.host, args.port
+
     loop = asyncio.get_event_loop()
     coro = loop.create_server(EchoServerClientProtocol, host, port)
     server = loop.run_until_complete(coro)
@@ -63,4 +65,4 @@ def run(host, port):
 
 
 if __name__ == "__main__":
-    run(**parse_args())
+    run()
