@@ -1,0 +1,6 @@
+jupyter:
+    image: flaxandteal/docker-rise
+    ports:
+      - 8888:8888
+    volumes:
+      - ..:/notebooks
