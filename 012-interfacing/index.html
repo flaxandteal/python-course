@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">  
+  <head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/sky.css" id="theme"> 
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <style>
+      .reveal .attribution {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        font-size: 0.5em;
+      }
+      html.img-left div.slide-background.present {
+        background-position: left;
+        background-size: contain;
+      }
+      html.img-right div.slide-background.present {
+        background-position: right;
+        background-size: contain;
+      }
+      html.img-right .slides {
+        text-align: left
+      }
+      .reveal .example {
+        color: #400;
+        padding-top: 0.5em;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="reveal">
+        <div class="slides">
+          <section>
+            <h1>Interfacing</h1>
+            <h2>Bursting the bubble</h2>
+          </section>
+          <section>
+            <aside class="notes">
+              As with previous motivational presentation, here I will
+              present a few examples of what you could achieve using
+              Python. In this case, I will discuss interfacing with
+              other languages, or platforms.
+            </aside>
+            <h2>Why interfacing?</h2>
+            <aside class="notes">
+              This is probably fairly obvious for some of you,
+              but I think it helps to have a clear idea of what motivates
+              doing extra work here.
+            </aside>
+            <ul>
+              <li class="fragment">Existing services</li>
+              <li class="fragment">Existing code</li>
+              <li class="fragment">High-performance components</li>
+              <li class="fragment">Wrapping non-Python libraries</li>
+              <li class="fragment">Using non-Python libraries</li>
+              <li class="fragment">Using online services</li>
+          </section>
+          <section>
+            <h1>Lower-level languages</h1><aside class="notes">A few of you mentioned embedded applications, so I will show one or two approaches for compiled language interfacing</aside>
+            <h2 class="fragment">Interacting with C</h2>
+          </section>
+          <section>
+            <section>
+              <h3>Extension modules</h3>
+              <p>The <a href='https://docs.python.org/3/extending/extending.html'>Python3 documentation</a> gives lots of info</p>
+              <aside class='notes'>This is the most basic approach, not the most maintainable or easy, but uses only core Python</aside>
+              <pre><code class="C" data-trim>
+#include &lt;Python.h&gt;
+...
+static PyObject* myfirst_doThing(PyObject* self, PyObject* args) {
+    const char* some_method;
+    int some_val, some_result;
+
+    /* Try to get Python arguments to this function */
+    if (!PyArg_ParseTuple(args, "ds", &some_val, &some_method))
+        return NULL;
+
+    /* Use C-only library */
+    some_result = other_science_lib_func(some_val, some_method);
+
+    return PyLong_FromLong(some_result);
+}
+              </code></pre>
+              <pre class="fragment"><code class="python" data-trim>
+import myfirst
+result = myfirst.doThing(27.3, "RK4")
+              </code></pre>
+              <aside class='notes'>Bare-bones, but lots of boiler-plate. Python API may change between versions. Works nicely with distutils.</aside>
+            </section>
+            <section>
+              <h3>SWIG</h3>
+              <pre><code class="C" data-trim>
+/* myfirst.h */
+double doThing(double val, const char* method);
+
+/* myfirst.i */
+%module myfirst
+%{
+  #define SWIG_FILE_WITH_INIT
+  #include "myfirst.h"
+%}
+%include "myfirst.h"
+
+/* myfirst.c */
+double doThing(double val, const char* method) {
+    return other_science_lib_func(val, method);
+}
+              </code></pre>
+            </section>
+            <aside class='notes'>This involves an extra step, but it allows you to generate bindings for most major scripting languages from the same input.</aside>
+            <section>
+              <h3>And...</h3>
+              <ul>
+                <li class='fragment'>
+                  ctypes
+                  <pre><code class="python" data-trim>
+libc = cdll.LoadLibrary("libc.so.6")
+libc.printf(b"Number is %d\n", 3)
+                  </code></pre>
+                </li>
+                <li class='fragment'>cffi</li>
+                <li class='fragment'>f2py (Fortran)</li>
+                <li class='fragment'>Cython (<em>not CPython</em>)</li>
+                <li class='fragment'>Similarly, Jython (Java) and IronPython (C#)</li>
+              </ul>
+            </section>
+          </section>
+          <section>
+            <h1>Devices</h1>
+            <h2>Hooking hardware</h2>
+          </section>
+          <section>
+            <section>
+              <h3>mbed</h3>
+              <p>IoT devices with ARM</p>
+              <pre><code class="python" data-trim>
+import mbedrpc
+mbed_dev = mbedrpc.HTTPRPC('192.168.0.23')
+dev_led1 = mbedrpc.DeviceOut(mbed_dev, 'LED1')
+dev_led1.write(1)
+              </code></pre>
+            </section>
+            <section>
+              <h3>GPIO</h3>
+              <p>With Raspberry Pi</p>
+              <aside class='notes'>Exemplar: not yet tested, based on documentation</aside>
+              <pre><code class="python">
+import RPi.GPIO as GPIO
+
+GPIO.setmode(GPIO.BOARD)
+channel = 15
+
+GPIO.setup(channel, GPIO.IN)
+print(GPIO.input(channel))
+
+if GPIO.input(channel) == GPIO.LOW:
+  GPIO.wait_for_edge(channel, GPIO.RISING)
+
+print("SIGNAL")
+
+GPIO.cleanup(channel)
+              </code></pre>
+            </section>
+            <section>
+              <h3>PyVISA</h3>
+              <p>Communicating with instruments</p>
+              <pre><code class="python" data-trim>
+import visa
+rm = visa.ResourceManager()
+# Open an instrument attached to system
+instrument = rm.open_resource('GPIB0::14::INSTR')
+# GPIB standard message to get instrument to identify itself
+instrument.write('*IDN?'))
+# Read response
+print(instrument.read())
+              </code></pre>
+              <p class='attribution'>Based on PyVISA docs</p>
+            </section>
+          </section>
+          <section>
+            <h1>Web services</h1>
+            <h2>Out into the world</h2>
+          </section>
+          <section>
+            <section>
+              <h3>Internet</h3>
+              <p>Downloading</p>
+              <pre><code class="python" data-trim>
+import urllib
+urllib.urlretrieve("https://raw.githubusercontent.com/flaxandteal/python-course/master/README", "phils-readme.txt")
+              </code></pre>
+              <aside class='notes'>Also checkout requests</aside>
+              <p>Email</p><aside class='notes'>Simple text email is about half the commands, but this can have images, logs, etc. attached</aside>
+              <pre><code class="python" data-trim>
+from smtplib import SMTP
+from email.mime.text import MIMEText
+
+message = MIMEText("Some really interesting diagnostic content")
+message['Subject'] = "Information from your system"
+message['From'] = 'me@example.net'
+message['To'] = 'you@example.org'
+
+with SMTP('smtp.example.net') as smtp:
+  smtp.send_message(message)
+  smtp.quit()
+              </code></pre>
+            </section>
+            <section>
+              <h3>WAMP (over WebSockets)</h3>
+              <p>Linking up across a network</p>
+              <aside class='notes'>Allows procedure calls and publish/subscribe with multiple distributed processes. Interaction with many languages</aside>
+              <pre><code class="python">import asyncio
+from autobahn.asyncio.wamp import ApplicationSession, ApplicationRunner
+from autobahn.wamp import register, subscribe
+
+class MyComponent(ApplicationSession):
+  @register('com.myservice.count')
+  def doCount(self, details):
+    print(details)
+    return 42
+
+  @subscribe('com.myservice.request_status')
+  def onRequestStatus(self):
+    self.publish('com.myservice.status', "Pretty happy right now")
+
+runner = ApplicationRunner('ws://127.0.0.1:8080/ws')
+runner.run(MyComponent)
+              </code></pre>
+              <p class='fragment'>Requires a WAMP "router", e.g. <a href='http://crossbar.io/'>Crossbar.io</a>, running on 127.0.0.1</p>
+              <aside class='notes'>Can call these routines from anything else that connects to that router -
+                for request_status, many processes may be responding to the same event, and anything listening
+                on the router will hear them all publish their status. Naturally, this is more useful with some
+                sort of identifier. In the "register", RPC, case, the call is more like a normal function with a
+                return value - only one process gets the call and replies directly. However, you should be careful
+                with RPC - when calling across a network, you should take care of cases where an answer does not
+                arrive because of connectivity, or is significantly delayed due to network traffic/configuration.
+              </aside>
+            </section>
+            <section>
+              <h3>Online services</h3>
+              <aside class='notes'>As we saw in the pandas session, some services have Python modules available</aside>
+              <p>Even if there is no API module, if there is a REST API, you can still use Python</p>
+              <pre><code class="python">
+import requests
+
+r = requests.get('https://api.example.org/v1/thing/5')
+# This could be a Python dict, say, of properties, or a list
+print(r.json())
+
+corrections = {'title': "A better title", 'author': "Me and Myself"}
+requests.post(
+    'https://api.example.org/v1/thing/5/update',
+    json=corrections
+)
+              </code></pre>
+              <p>You can use Github and Yahoo! this way, for instance</p>
+            </section>
+          </section>
+          <section>
+            <h2>So...</h2>
+            <ul>
+              <li>Python is good at linking to existing code and services</li>
+              <li class="fragment example">Devices are often Python-accessible</li>
+              <li class="fragment example">Check Github and PyPI for your application</li>
+              <li class="fragment example">Look for projects with good docs</li>
+              <aside class='notes'>You will find this critical if your usage starts to get complicate, or a linking module becomes project-critical</aside>
+            </ul>
+          </section>
+        </div>
+      </div>
+  </body>
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+  <script>
+    // Required, even if empty.
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+        ]
+    });
+  </script>
+</html>
