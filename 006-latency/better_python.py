@@ -11,39 +11,27 @@ Created on Sat Dec 24 14:20:13 18
 """
 # pylint: disable-msg=C0103
 
-import logging
 import numpy as np
 
 # Indicates whether to output both cos and sin (rounded) [True]
 # or just sin [False]
 newversion = False
 
-# Set this to None, for STDOUT only, or a filename to send output there
-log_filename = None
-
-# We want to set an output log location and be able use stdout - logging is
-# well set up for this usage. We set the logger's name in case we ever want
-# to import this code into another module
-logging.basicConfig(
-    format="%(line_number)d:%(message)s",
-    filename=log_filename,
-    level=logging.INFO
-)
-logger = logging.getLogger(__name__)
-
 # I would rather not use this approach, but keeping track of the output line
 # number is not a common logging module (or print) use
 class Outputter:
     """
-    This is a class for providing output with additional functionality beyond
-    the basic logging library system.
+    This is a class for providing output with line numbers.
     """
     line_number = 1
 
     def write(self, line):
-        """This wraps the logger, printing incrementing line numbers beside output"""
-        # Supply additional fields for logging format as a dict
-        logger.info(line, extra={"line_number": self.line_number})
+        """This wraps the print function, incrementing line numbers"""
+
+        print("{line_number}:{line}".format(
+            line_number=self.line_number,
+            line=line
+        ))
         self.line_number += 1
 
 # Object for managing output - can keep track of its own variables (say we want
@@ -81,7 +69,7 @@ if newversion:
     """)
 
 # NOTE: the output starts with the line number, not x
-# (bad idea - only for compatibility)
+# (bad idea - only for compatibility with bad_python.py)
 for sinx in sin_values:
     message = "%.16lf" % sinx
     output.write(message)

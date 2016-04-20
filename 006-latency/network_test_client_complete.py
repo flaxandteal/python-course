@@ -18,8 +18,8 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Parameters
-host = '143.117.100.160'
-port = 443
+# host = 'TBC'
+port = 1234
 repeats = 100  # Keep this <= 100, please!
 timeout = 5  # Number of seconds until giving up on connection
 
@@ -42,6 +42,7 @@ def round_trip(skt):
 try:
     with socket.create_connection(address=(host, port), timeout=timeout) as skt:
         logger.info("Created connection")
+
         # This is going to add a bit of misleading overhead, but for this
         # purpose we'll use lambda for simplicity
         return_time_total = timeit.timeit(
