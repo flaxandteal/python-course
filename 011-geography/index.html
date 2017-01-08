@@ -112,6 +112,33 @@ for region in maxp.regions:
             <h1>QGIS + ArcGIS</h1>
             <img src='data/qgis.png'/>
           </section>
+          <section>
+            <h1>GeoPandas + Folium</h1>
+            <p>Pandas + Bokeh for GIS</p>
+          </section>
+          <section>
+            <section>
+            <pre><code data-trim>
+rows = []
+popups = []
+def latlong(row):
+  rows.append([row.geometry.y, row.geometry.x])
+  popups.append("Fe2 O3: %lf" % row.Fe2O3)
+
+gdf = geopandas.GeoDataFrame.from_file(geo_path).to_crs(epsg='4326')
+gdf.apply(latlong, axis=1)
+
+ice_map = folium.Map(location=[55, -6],
+                     tiles='cartodbpositron', zoom_start=10)
+ice_map.add_children(plugins.MarkerCluster(locations=rows, popups=popups))
+ice_map.save('soils.html')
+            </code></pre>
+            </section>
+            <section>
+              <a href='data/folium.html' target='new'><img src='data/folium.png'/></a>
+              <p class="attribution"><a href='https://www.opendatani.gov.uk/dataset/rural-soil-survey'>GSNI Tellus Rural Soil Survey</a> - OpenDataNI - UK-OGL</p>
+            </section>
+          </section>
         </div>
       </div>
   </body>
