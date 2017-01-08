@@ -91,6 +91,21 @@ fitted_results = model.fit()
 print(fitted_results.summary())  # Lots of detailed statistical output
             </code></pre>
           </section>
+          <section>
+            <h2>scikit-learn, scikit-image, keras...</h2>
+            <h3 class="fragment">Teaching the machine</h3>
+          </section>
+          <aside class="notes">Boston house prices - 13 variables, predicting median price, shows actual val vs predict val for 503 areas</aside>
+          <section>
+            <pre><code data-trim>
+from sklearn import datasets
+from sklearn.model_selection import cross_var_predict
+
+linear_regression = linear_model.LinearRegression
+boston = datasets.load_boston() # Example in docs
+cross_val_predict(linear_regression, boston.data, boston.target)
+            </code></pre>
+          </section>
           <aside class="notes">While we have only shown CSV, these libraries are also capable of handling XLS and other formats</aside>
           <section>
             <h2>pandas deals in DataFrames</h2>
@@ -105,7 +120,7 @@ print(fitted_results.summary())  # Lots of detailed statistical output
             <h2>More info on pandas...</h2>
             <ul>
               <li class="fragment">"10 minutes to pandas"</li>
-              <li class="fragment">More coming up on next day</li>
+              <li class="fragment">More coming up...</li>
             </ul>
           </section>
           <section>
