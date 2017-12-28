@@ -1,5 +1,5 @@
-Introductory Python for Researchers with Computing Experience
-=============================================================
+Introductory Python for Researchers
+===================================
 
 With thanks to [Software Carpentry](http://software-carpentry.org/)
 for releasing their training materials under a Creative Commons
