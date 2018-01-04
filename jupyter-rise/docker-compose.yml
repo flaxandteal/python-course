@@ -1,5 +1,5 @@
 jupyter:
-    image: flaxandteal/docker-rise:dev
+    image: flaxandteal/docker-rise:latest
     ports:
       - 8888:8888
     volumes:
