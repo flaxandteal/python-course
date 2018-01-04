@@ -4,3 +4,5 @@ scratch.zip
 bokeh-notebooks
 *SFConflict*
 .ipynb_checkpoints
+*.pyc
+__pycache__
