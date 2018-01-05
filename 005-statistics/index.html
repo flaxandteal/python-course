@@ -73,23 +73,65 @@ for i in range(100):
             and only a small part of their functionality is related to stats, but this should give you an idea of
             where to start when you set out to play with numbers, and how easy it is.</aside>
           <section>
-            <h2>Pandas + Patsy<br/>+ statsmodule</h2>
+            <h2>Pandas + Patsy<br/>+ statsmodels</h2>
             <p class="fragment">Bringing the Power of R</p>
           </section>
           <section>
-            <pre><code data-trim>
+            <section>
+              <pre><code data-trim>
 import pandas
-import statsmodule as sm
+import matplotlib.pyplot as plt
+from pandas.plotting import scatter_matrix
+import statsmodels.api as sm
+from patsy import dmatrices
 
-# City, HealthIndex, Population, InfectionRate, SurvivalRate
-data_frame = pandas.read_csv("infection_rates_by_city_2014.csv")
-
-y, X = sm.dmatrices('Infection Rate ~ HealthIndex + Population')
+# NI Multiple Deprivation Measures (NISRA: OGL)
+df = pandas.read_csv('nimdm-2010.csv')
+y, X = dmatrices('Education ~ Employment + Crime', data=df)
 model = sm.OLS(y, X)
 fitted_results = model.fit()
 
+df.plot(kind='scatter', x='Crime', y='Employment', s=(df['Education'] + 1) * 0.1)
+plt.show()
+
 print(fitted_results.summary())  # Lots of detailed statistical output
-            </code></pre>
+              </code></pre>
+            </section>
+            <section>
+              <img src='python/emp-crime.png'/>
+            </section>
+            <section>
+              <pre><code data-trim>
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              Education   R-squared:                       0.706
+Model:                            OLS   Adj. R-squared:                  0.705
+Method:                 Least Squares   F-statistic:                     696.3
+Date:                Thu, 04 Jan 2018   Prob (F-statistic):          8.73e-155
+Time:                        07:55:18   Log-Likelihood:                -3451.4
+No. Observations:                 582   AIC:                             6909.
+Df Residuals:                     579   BIC:                             6922.
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept     21.4209      8.568      2.500      0.013       4.593      38.249
+Employment     0.7356      0.025     29.031      0.000       0.686       0.785
+Crime          0.1909      0.025      7.533      0.000       0.141       0.241
+==============================================================================
+Omnibus:                        9.221   Durbin-Watson:                   1.780
+Prob(Omnibus):                  0.010   Jarque-Bera (JB):               11.290
+Skew:                          -0.187   Prob(JB):                      0.00354
+Kurtosis:                       3.571   Cond. No.                     1.04e+03
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.04e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.
+              </code></pre>
+            </section>
           </section>
           <section>
             <h2>scikit-learn, scikit-image, keras...</h2>
