@@ -2,7 +2,6 @@ import pytest
 import numpy as np
 import itertools
 import Levenshtein as levenshtein_module
-import python_course_levenshtein_rs
 import python_course_levenshtein_c
 import my_levenshtein
 

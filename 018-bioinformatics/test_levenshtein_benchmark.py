@@ -2,7 +2,6 @@ import pytest
 import numpy as np
 import itertools
 import Levenshtein as levenshtein_module
-import python_course_levenshtein_rs
 import python_course_levenshtein_c
 import my_levenshtein
 
@@ -41,17 +40,17 @@ def test_ctypes(string1, string2, benchmark):
     string2_c = bytes(string2, encoding='ascii')
     edit_distance = benchmark(python_course_levenshtein_c.get_levenshtein_distance, string1_c, string2_c)
 
-    assert edit_distance == distance(string1, string)
+    assert edit_distance == distance(string1, string2)
 
 #def test_pure_python(string1, string2, benchmark):
 #    edit_distance = benchmark(my_levenshtein.calculate_levenshtein, string1, string2)
 #
 #    assert edit_distance == distance(string1, string2)
 
-#def test_matrix_python(string1, string2, benchmark):
-#    edit_distance = benchmark(my_levenshtein.calculate_levenshtein_matrix, string1, string2)
-#
-#    assert edit_distance == distance(string1, string2)
+def test_matrix_python(string1, string2, benchmark):
+    edit_distance = benchmark(my_levenshtein.calculate_levenshtein_matrix, string1, string2)
+
+    assert edit_distance == distance(string1, string2)
 
 def test_python_module(string1, string2, benchmark):
     edit_distance = benchmark(levenshtein_module.distance, string1, string2)

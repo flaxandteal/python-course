@@ -22,6 +22,8 @@ def calculate_levenshtein(a, b):
 
 # Iterative approach
 def calculate_levenshtein_matrix(a, b):
+    k = len(a) + 1
+    l = len(b) + 1
     matrix = np.zeros((k, l), dtype=int)
 
     ...
