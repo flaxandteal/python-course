@@ -5,3 +5,4 @@ sklearn
 geopandas
 folium
 shapely
+venv
