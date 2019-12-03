@@ -1,5 +1,4 @@
 argparse
-socket
 timeit
 numpy
 pandas
