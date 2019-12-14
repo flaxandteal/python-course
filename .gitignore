@@ -6,3 +6,4 @@ bokeh-notebooks
 .ipynb_checkpoints
 *.pyc
 __pycache__
+.cache

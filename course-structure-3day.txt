@@ -1,0 +1,38 @@
+Day 1 - Introduction
+Prerequisites: Basic use of MATLAB or another programming language
+ - What is Python, why use it, who uses it and what are the benefits?
+ - Basic control structures and variables; Jupyter Notebooks (i)
+ - Applications of Python: Scripting tasks
+ - File operations / Matplotlib / Basic Numpy (i) 
+ - Applications of Python: Statistics / Data Analysis / Logging
+ - Closing comments
+Assistance installing on your own device
+ 
+Interactive sessions, marked (i)
+ 
+Afterwards: assistance available with installs
+ 
+Day 2 - Tooling
+Prerequisites: Day 1 -or- basic familiarity with Python concepts (if structures, opening files, preferably numpy and jupyter)
+Session 1
+ - Brief Recap of Day 1
+ - Further control structures (lambdas / basic classes / exceptions) (i)
+ - Pandas and basic data science (i) 
+ - Applications of Python: Engineering & Simulation
+ - Using an IDE (Spyder), environments; networks and threading (i) 
+ - Applications of Python: Embedded / Control / Network
+ - Closing presentation
+ 
+Day 3 - Application
+Prerequisites: Day 2
+ - Basic Machine Learning (i) 
+ - Applications of Python: Big Science & Bioinformatics 
+ - Preparing for an Audience: Data Visualization (i) 
+ - Reproducible Science
+ - Geospatial & Images (i)
+ - Applications of Python: Geography
+ - Closing presentation
+
+Please note that specific topics are subject to some change, particularly due to timing constraints and group needs. If you have a particular subject above that you are keen to ensure is covered, please ask in advance.   
+Interactive notes will be available online (Github). Interactive sessions are marked (i)
+Afterwards: individual questions; PhD project-related pointers (at least for survey respondents in Day 1)

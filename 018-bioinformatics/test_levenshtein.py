@@ -5,8 +5,8 @@ import Levenshtein as levenshtein_module
 import python_course_levenshtein_c
 import my_levenshtein
 
-LEN = 5
-MISTAKES = 2
+LEN = 50000
+MISTAKES = 200
 
 @pytest.fixture
 def string1():
@@ -57,4 +57,4 @@ if __name__ == "__main__":
     test1 = string1()
     test2 = string2(test1)
     print(test1[0:20] + '...', test2[0:20] + '...')
-    print('DISTANCE: ', distance(test1, test2))
+    print('DISTANCE: ', my_levenshtein.calculate_levenshtein(test1, test2))

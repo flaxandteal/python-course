@@ -14,10 +14,6 @@ def calculate_levenshtein(a, b):
 
     ...
 
-    #Remove this
-    result = python_course_levenshtein_py.calculate_levenshtein(a, b)
-    #From here
-
     return result
 
 # Iterative approach
