@@ -1,6 +1,7 @@
+from sys import *
 from numpy import *
 from sympy import *
-from sys import *
+from numpy import array
 
 newversion = False
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 bokeh
 jinja2
 matplotlib
@@ -20,3 +21,4 @@ scipy
 scikit-image
 statsmodels
 quandl
+shapely
