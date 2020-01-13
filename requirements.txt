@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 bokeh
 jinja2
 matplotlib
