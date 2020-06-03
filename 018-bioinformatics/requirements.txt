@@ -1,4 +1,4 @@
 numpy
 pytest
-pytest-benchmark
-python-levenshtein
+pytest-benchmark ==3.2.*
+python-levenshtein >=0.10, <0.13
