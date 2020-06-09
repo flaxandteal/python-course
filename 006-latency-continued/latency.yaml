@@ -1,0 +1,12 @@
+timer_repeats: 100
+
+# It would be nicer to do these as YAML sections,
+# giving nested dictionaries (on using configparser),
+# but it would take a little more care in our config
+# module
+http_echo_client_host: localhost
+http_echo_client_port: 1234
+http_echo_client_timeout_seconds: 5
+http_echo_client_default_payload_size_bytes: 1024
+
+caller_count: 10

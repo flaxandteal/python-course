@@ -8,3 +8,5 @@ bokeh-notebooks
 __pycache__
 .cache
 .mypy_cache
+.venv
+.vscode

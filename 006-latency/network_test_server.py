@@ -34,9 +34,8 @@ class EchoServerClientProtocol(asyncio.Protocol):
         """Handle new message"""
         asyncio.ensure_future(self.respond(data))
 
-    @asyncio.coroutine
-    def respond(self, data):
-        yield from asyncio.sleep(DELAY)
+    async def respond(self, data):
+        await asyncio.sleep(DELAY)
         self.transport.write(data)
 
 
