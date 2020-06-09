@@ -25,8 +25,13 @@ class Outputter:
     """
     line_number = 1
 
+    def header(self, header):
+        """Output an (unnumbered) header line."""
+
+        print(header)
+
     def write(self, line):
-        """This wraps the print function, incrementing line numbers"""
+        """This wraps the print function, incrementing line numbers."""
 
         print("{line_number}:{line}".format(
             line_number=self.line_number,
@@ -34,30 +39,30 @@ class Outputter:
         ))
         self.line_number += 1
 
-# Object for managing output - can keep track of its own variables (say we want
-# to add more output-specific functionality, this walls it off)
-output = Outputter()
+def analyse(outputter):
+    # Range of values to output
+    max_x = 9
+    x_array = np.arange(1, max_x + 1)
 
-# Range of values to output
-max_x = 9
-x_array = np.arange(1, max_x + 1)
+    # Most numpy functions can take an array and act on each member
+    sin_values = np.sin(x_array)
 
-# Most numpy functions can take an array and act on each member
-sin_values = np.sin(x_array)
+def run():
+    # Object for managing output - can keep track of its own variables (say we want
+    # to add more output-specific functionality, this walls it off)
+    output = Outputter()
 
-# Start output followed by a line break
-# TODO: add a more constructive title
-if newversion:
-    task = "SIN AND COS"
-else:
-    task = "SIN"
+    # Start output followed by a line break
+    # TODO: add a more constructive title
+    if newversion:
+        task = "SIN AND COS"
+    else:
+        task = "SIN"
 
-header = """
-PRINTING VALUES OF {task} FOR x IN 1, 2,..., {max_x}
-""".format(
-    task=task,
-    max_x=max_x
-)
+    header = "PRINTING VALUES OF {task} FOR x IN 1, 2,..., {max_x}".format(
+        task=task,
+        max_x=max_x
+    )
 
 # Print the header (without initial newline)
 output.write(header.lstrip())

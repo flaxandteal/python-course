@@ -18,7 +18,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Parameters
-# host = 'TBC'
+host = 'localhost'
 port = 1234
 repeats = 100  # Keep this <= 100, please!
 timeout = 5  # Number of seconds until giving up on connection
