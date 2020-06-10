@@ -20,7 +20,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Parameters
-# host = 'TBC'
+host = 'localhost'
 port = 1234
 repeats = 10  # Keep this <= 10, please!
 thread_count = 10  # Keep this <= 10, please!
