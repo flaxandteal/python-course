@@ -1,4 +1,4 @@
-from magnumopus.substance import Substance
+from magnumopus.models.substance import Substance
 
 def test_can_cook_substance():
     substance = Substance()
