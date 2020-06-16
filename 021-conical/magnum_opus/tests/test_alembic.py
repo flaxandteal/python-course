@@ -1,7 +1,7 @@
 import pytest
 
-from magnumopus.alembic import Alembic, NotEnoughSubstancesToMixException, UnknownProcessException
-from magnumopus.substance import Substance
+from magnumopus.services.alembic import Alembic, NotEnoughSubstancesToMixException, UnknownProcessException
+from magnumopus.models.substance import Substance
 
 def test_can_set_up_my_alembic():
     Alembic()

@@ -1,5 +1,5 @@
-from magnumopus.pantry import Pantry
-from magnumopus.substance import Substance
+from magnumopus.repositories.pantry import Pantry
+from magnumopus.models.substance import Substance
 
 def test_can_add_to_pantry():
     pantry = Pantry()
@@ -17,6 +17,6 @@ def test_can_retrieve_substance_from_pantry_by_nature():
 
     pantry.add_substance(substance)
 
-    mercury = pantry.find_substance_by_nature('Mercury')
+    mercury = pantry.find_substances_by_nature('Mercury')[0]
 
     assert mercury.nature == 'Mercury'

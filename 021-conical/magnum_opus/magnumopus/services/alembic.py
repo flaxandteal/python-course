@@ -1,4 +1,4 @@
-from .substance import Substance
+from ..models.substance import Substance
 
 class NotEnoughSubstancesToMixException(Exception):
     pass

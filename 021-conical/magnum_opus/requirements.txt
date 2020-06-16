@@ -1,5 +1,5 @@
-numpy
-pylint
-pyyaml
-Click
 appdirs
+flask
+flask-restful
+flask-marshmallow
+flask-sqlalchemy
