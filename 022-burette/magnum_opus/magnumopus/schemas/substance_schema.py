@@ -16,3 +16,4 @@ class SubstanceSchema(ma.SQLAlchemySchema):
 
     id = ma.auto_field()
     nature = ma.auto_field()
+    state = fields.Function(lambda model: model.state or [])

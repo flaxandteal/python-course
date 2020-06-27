@@ -55,7 +55,7 @@ class SubstanceResource(Resource):
 
         pantry.commit()
 
-        return self._substance_schema.dump(substance)
+        return self._substance_schema.dump(substance), 201
 
 
 def init_app(app, api):

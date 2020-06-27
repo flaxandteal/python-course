@@ -1,5 +1,5 @@
 from . import db
-from sqlalchemy_utils.types.scalar_list import ScalarListType
+from sqlalchemy_utils import ScalarListType
 
 class SubstanceMustBeFreshToProcessException(Exception):
     pass
@@ -18,7 +18,13 @@ class Substance(db.Model):
         super(Substance, self).__init__()
 
     def _process(self, process_name):
-        self.state.append(process_name)
+        # Example of leakage of persistence behaviour into
+        # domain, due to db.Model -- we must copy the state list to
+        # ensure it is seen to change...
+        state = self.state[:]
+        state.append(process_name)
+        self.state = state
+
         return self
 
     def cook(self):

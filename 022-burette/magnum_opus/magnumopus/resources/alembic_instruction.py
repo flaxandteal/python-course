@@ -46,12 +46,16 @@ class AlembicInstructionResource(Resource):
 
         # Crude start at DI... see flask-injector
         result = instruction_handler.handle(instruction, pantry)
+        print('y', result.state, result.id, self._substance_schema.dump(result))
 
         pantry.add_substance(result)
+        print('z', result.state, result.id, self._substance_schema.dump(result))
 
         pantry.commit()
+        print('a', result.state, result.id, self._substance_schema.dump(result))
+        print(result.state, result.id, self._substance_schema.dump(result))
 
-        return self._substance_schema.dump(result)
+        return self._substance_schema.dump(result), 201
 
 
 def init_app(app, api):
