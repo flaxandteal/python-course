@@ -1,0 +1,8 @@
+appdirs
+flask
+flask-restful
+flask-marshmallow
+flask-sqlalchemy
+flask-injector
+marshmallow-sqlalchemy
+sqlalchemy-utils
