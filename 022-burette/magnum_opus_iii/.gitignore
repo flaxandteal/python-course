@@ -1,0 +1,5 @@
+*.egg-info
+.tox
+Pipfile
+.env
+.nenv

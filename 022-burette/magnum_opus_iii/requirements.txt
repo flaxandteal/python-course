@@ -1,0 +1,10 @@
+appdirs
+quart
+wheel
+quart-openapi
+flask-marshmallow
+flask-sqlalchemy
+flask-injector
+marshmallow-sqlalchemy
+sqlalchemy-utils
+ariadne

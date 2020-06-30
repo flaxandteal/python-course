@@ -1,0 +1,5 @@
+numpy
+pylint
+pyyaml
+Click
+appdirs

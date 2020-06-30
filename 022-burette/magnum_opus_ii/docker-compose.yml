@@ -1,0 +1,11 @@
+version: "3"
+services:
+  web_async:
+    build: .
+    environment:
+      DATABASE_URI: 'sqlite:////docker/storage/storage.db'
+    volumes:
+      - ./docker:/docker
+      - ./magnumopus:/home/user/magnumopus
+    ports:
+      - 5000:5000

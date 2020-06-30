@@ -1,0 +1,10 @@
+version: "3"
+services:
+  web:
+    build: .
+    environment:
+      DATABASE_URI: 'sqlite:////docker/storage/storage.db'
+    volumes:
+      - ./docker:/docker
+    ports:
+      - 5000:5000
