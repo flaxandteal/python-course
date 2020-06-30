@@ -20,3 +20,10 @@ def configure_injector(binder):
             'many': SubstanceSchema(many=True)
         }
     )
+
+def init_graph(query):
+    from .substance_schema import init_graph as init_graph_substance
+
+    return [
+        init_graph_substance(query)
+    ]

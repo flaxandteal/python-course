@@ -2,6 +2,7 @@ from quart import request
 from quart_openapi import Resource
 from injector import inject
 from typing import Dict
+from ariadne import ObjectType
 from ..injection import ViewInjectorMeta
 from ..repositories.pantry import Pantry
 from ..models import db
@@ -47,3 +48,22 @@ def init_app(app):
         get_app = lambda: app
 
     app.route('/substance', endpoint='SubstanceResource')(AppSubstanceResource)
+
+def init_graph(query):
+    substance = ObjectType('Substance')
+
+    @query.field('substances')
+    @inject
+    def resolve_substances(obj, info, pantry: Pantry, *_, nature='Unknown'):
+        substances = pantry.find_substances_by_nature(nature)
+        return substances
+
+    @substance.field('nature')
+    def resolve_nature(obj, *_):
+        return obj.nature
+
+    @substance.field('state')
+    def resolve_state(obj, *_):
+        return obj.state
+
+    return [substance]

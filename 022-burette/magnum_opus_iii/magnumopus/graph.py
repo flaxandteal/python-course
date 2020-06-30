@@ -1,57 +1,46 @@
 from quart import request, jsonify
+from graphql import GraphQLSchema
 from ariadne import ObjectType, make_executable_schema, graphql
-from ariadne.constants import PLAYGROUND_HTML
+from .schemas import init_graph as init_graph_schemas
+from .resources import init_graph as init_graph_resources
 
-from .repositories import PANTRY_STORES
-
-PANTRY = PANTRY_STORES['list']
-
-type_defs = """
+TYPE_DEFS = """
     type Query {
         substances(nature: String!): [Substance]
     }
-
-    type Substance {
-        nature: String!,
-        state: [String]!
-    }
 """
 
-query = ObjectType('Query')
-substance = ObjectType('Substance')
+class InjectorObjectType(ObjectType):
+    def __init__(self, *args, app=None, **kwargs):
+        super(InjectorObjectType, self).__init__(*args, **kwargs)
+        self._app = app
 
-@query.field('substances')
-def resolve_substances(obj, *_, nature='Unknown'):
-    return PANTRY.find_substances_by_nature(nature)
+    def get_injector(self):
+        return self._app.extensions['injector']
 
-
-@substance.field('nature')
-def resolve_nature(obj, *_):
-    return obj.nature
-
-@substance.field('state')
-def resolve_state(obj, *_):
-    return obj.state
-
-schema = make_executable_schema(type_defs, query, substance)
-
-async def graphql_server():
-    data = await request.get_json()
-    success, result = await graphql(
-        schema,
-        data,
-        context_value=request
-    )
-
-    return jsonify(result), (200 if success else 400)
+    def field(self, name: str):
+        g = super(InjectorObjectType, self).field(name)
+        def injected_resolver(f):
+            def _inject_resolver(*args, **kwargs):
+                self._app.logger.error(name)
+                inj = self.get_injector()
+                return inj.call_with_injection(
+                    f, args=args, kwargs=kwargs
+                )
+            return g(_inject_resolver)
+        return injected_resolver
 
 def init_app(app):
-    app.route('/graphql', methods=['GET'], endpoint='graphql_playground')(
-        lambda: (PLAYGROUND_HTML, 200)
-    )
+    query = InjectorObjectType('Query', app=app)
 
-    app.route('/graphql', methods=['POST'], endpoint='graphql_server')(
-        graphql_server
-    )
+    type_defs = [TYPE_DEFS] + init_graph_schemas(query)
+    resolvers = [query] + init_graph_resources(query)
 
-    return []
+    schema = make_executable_schema(type_defs, resolvers)
+
+    return [
+        lambda binder: binder.bind(
+            GraphQLSchema,
+            to=schema
+        )
+    ]
