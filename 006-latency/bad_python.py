@@ -11,7 +11,9 @@ STDOUT = None # so i switch to file
 def a(t, b):
  global n
  n += 1
+ value = t(b)
  print(str(n).strip()+": ",t(b))
+
 def print(a,something, close=0):
   global STDOUT
   if STDOUT is None:
