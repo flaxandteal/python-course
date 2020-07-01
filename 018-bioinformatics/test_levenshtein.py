@@ -5,8 +5,8 @@ import Levenshtein as levenshtein_module
 import python_course_levenshtein_c
 import my_levenshtein
 
-LEN = 50000
-MISTAKES = 200
+LEN = 5
+MISTAKES = 2
 
 @pytest.fixture
 def string1():
