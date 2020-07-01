@@ -32,5 +32,4 @@ class AlembicInstructionHandler:
         else:
             raise UnknownAlembicInstructionException(f'Unknown instruction: {action}')
 
-        print(result.state, result.id, 'x')
         return result
