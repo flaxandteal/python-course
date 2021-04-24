@@ -39,17 +39,33 @@ def test_runner_can_generate_callers(config, run_cb):
 
     # Don't generally need (or should) test private methods - they're internal concerns,
     # but should test combined functionality
-    with patch('threading.Thread') as thread_mock, patch('threading.Lock') as thread_lock:
-        callers = runner.generate_callers(caller_indices, run_cb, create_client, results)
+    # with patch('threading.Thread') as thread_mock, patch('threading.Lock') as thread_lock:
+    callers = runner.generate_callers(caller_indices, run_cb, create_client, results)
 
     assert type(callers) is dict
-    assert thread_mock.call_count == len(caller_indices)
 
-    # Could be more precise and check exact calls all match
-    thread_mock.assert_called_with(
-        target=runner.run_caller,
-        args=(run_cb, create_client, thread_lock(), results, config)
-    )
-    # note the scoping surprise above... (lock)
+    assert all([type(identifier) is str for identifier in callers])
 
-    # ...but may be better to let the real threads run with fake functions...
+    for idx, thread in callers.items():
+        thread.index = idx
+        thread.start()
+        thread.join()
+
+
+def test_runner_threads_require_an_index(config, run_cb):
+    runner = ParallelRunner(config)
+
+    results = []
+
+    # Ensure we have our identifiers as strings, as these will be treated as names.
+    caller_indices = ['1', '2', '3', 'test']
+    create_client = lambda config: None
+
+    # Don't generally need (or should) test private methods - they're internal concerns,
+    # but should test combined functionality
+    # with patch('threading.Thread') as thread_mock, patch('threading.Lock') as thread_lock:
+    callers = runner.generate_callers(caller_indices, run_cb, create_client, results)
+
+    for thread in callers.values():
+        thread.start()
+        thread.join()

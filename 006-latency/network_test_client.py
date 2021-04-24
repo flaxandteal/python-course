@@ -24,7 +24,25 @@ port = 1234
 repeats = 100  # Keep this <= 100, please!
 timeout = 5  # Number of seconds until giving up on connection
 
+def round_trip(skt):
+    payload = os.urandom(1024)
 
-# IN HERE WE WILL WRITE THE NETWORK LATENCY CODE
+    skt.sendall(payload)
+    received_payload = skt.recv(1024)
 
-logger.info("Average time taken: {delay} ms".format(delay=average_return_time))
+    if received_payload != payload:
+        raise IOError("We received an incorrect echo")
+
+try:
+    with socket.create_connection(address=(host, port), timeout=timeout) as skt:
+        logger.info("Created connection")
+        round_trip(skt)
+        logger.info("Completed trial")
+except ConnectionRefusedError as e:
+    logger.error(
+        "We could not create a socket connection to the "
+        "remote echo server"
+    )
+    raise e
+
+# logger.info("Average time taken: {delay} ms".format(delay=average_return_time))

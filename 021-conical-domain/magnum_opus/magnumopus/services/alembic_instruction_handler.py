@@ -1,11 +1,7 @@
 from dataclasses import dataclass
-from injector import inject
 
 from .alembic import Alembic
 from ..repositories.pantry import Pantry
-
-class UnknownAlembicInstructionException(Exception):
-    pass
 
 @dataclass
 class AlembicInstruction:
@@ -14,7 +10,6 @@ class AlembicInstruction:
     action: str = ''
 
 class AlembicInstructionHandler:
-    @inject
     def handle(self, instruction: AlembicInstruction, pantry: Pantry):
         natures = instruction.natures
         action = instruction.action
@@ -30,6 +25,7 @@ class AlembicInstructionHandler:
         elif instruction_type == 'process':
             result = alembic.process(action, substances[0])
         else:
-            raise UnknownAlembicInstructionException(f'Unknown instruction: {action}')
+            pass
+            # a sensible error
 
         return result
