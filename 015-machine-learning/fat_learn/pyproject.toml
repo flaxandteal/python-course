@@ -1,0 +1,38 @@
+[project]
+name = "fat_learn"
+license = { file = "LICENSE.md" }
+authors = [{ name = "Phil Weir", email = "phil.weir@flaxandteal.co.uk" }]
+dynamic = ["version"]
+requires-python = ">= 3.9"
+readme = "README.md"
+
+dependencies = [
+    "scipy",
+    "scikit-image",
+    "scikit-learn",
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "geopandas",
+    "folium",
+    "shapely"
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest >= 7",
+    "ruff",
+]
+
+[tool.black]
+line-length = 120
+
+[tool.setuptools]
+packages = ["fat_learn"]
+
+[tool.setuptools.dynamic]
+version = { attr = "fat_learn.__version__" }
+
+[build-system]
+requires = ["setuptools ~= 64.0"]
+build-backend = "setuptools.build_meta"
